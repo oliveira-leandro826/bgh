@@ -152,16 +152,16 @@
 						<h2 class="hide">Serviços</h2>
 						<ul>
 							<li class="portalservicos-item">
-								<a title="Início" href="#">Início</a>
+								<a title="Início" href="{% url 'index' %}">Início</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Introdução" href="#">Introdução</a>
+								<a title="Introdução" href="{% url 'introducao' %}">Introdução</a>
 							</li>
 							<li class="portalservicos-item">
 								<a title="Cadastro" href="#">Cadastro</a>
 							</li>
 							<li class="portalservicos-item">
-								<a title="Coleções" href="#">Coleções</a>
+								<a title="Coleções" href="{% url 'colecoes' %}">Coleções</a>
 							</li>
 							<li class="portalservicos-item">
 								<a title="Contato" href="#">Contato</a>
@@ -245,9 +245,18 @@
     		<!-- fim .container -->
 			<div class="footer-logos">
 				<div class="container">
-					<a href="http://www.acessoainformacao.gov.br/" class="logo-acesso pull-left"><img src="{% static 'images/acesso-a-informacao.png' %}" alt="Acesso a Informação"></a>
+					<!-- <a href="http://www.acessoainformacao.gov.br/" class="logo-acesso pull-left"><img src="{% static 'images/acesso-a-informacao.png' %}" alt="Acesso a Informação"></a> -->
 					<!-- separador para fins de acessibilidade --><span class="hide">&nbsp;</span><!-- fim separador para fins de acessibilidade -->
-					<a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="{% static 'images/brasil.png' %}" alt="Brasil - Governo Federal"></a>
+					<!-- <a href="http://www.brasil.gov.br/" class="brasil pull-right"><img src="{% static 'images/brasil.png' %}" alt="Brasil - Governo Federal"></a> -->
+					<img src="{% static 'img/ufpi.jpg' %}" alt="UFPI" style="height: 150px;">
+					<span class="hide">&nbsp;</span>
+					<img src="{% static 'img/capes.png' %}" alt="CAPES" style="height: 150px;"> 
+					<span class="hide">&nbsp;</span>
+					<img src="{% static 'img/cnpq.png' %}" alt="CNPq" style="height: 150px;">
+					<span class="hide">&nbsp;</span>
+					<img src="{% static 'img/fapepi.png' %}" alt="FAPEPI" style="height: 150px;">
+					<span class="hide">&nbsp;</span>
+					<img src="{% static 'img/laboratorio.jpg' %}" alt="LABORATÓRIO" style="height: 150px;"> 
 				</div>				
 			</div>
 			<div class="footer-ferramenta">
