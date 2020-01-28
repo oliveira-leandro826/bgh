@@ -7,6 +7,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('introducao', views.introducao, name='introducao'),
     path('colecoes', views.colecoes, name='colecoes'),
+    path('especie/<int:id>', views.especie, name='especie'),
 ]
 
 if settings.DEBUG:

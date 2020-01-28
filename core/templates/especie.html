@@ -7,13 +7,19 @@
 							<div class="row-fluid">
 								<div class="span12 module">
 									<div class="outstanding-header">
-										<h2 class="outstanding-title">Coleções</h2>
+										<h2 class="outstanding-title">{{ especie.nome }}</h2>
 									</div>
 									<div class="row-fluid">
-										{% for especie in especies %}
+										{% for acesso in acessos %}
 											<div class="span4 module">
-												<a href="especie/{{ especie.pk }}"><p>{{ especie.nome }}</p></a>
+												<img src="{{ acesso.imagem.caminho.url }}" alt="{{ acesso.nome }}">
+												<h2>
+													<strong>{{ acesso.nome }}</strong>
+												</h2>
+												<p class="description">Breve descrição.</p>
 											</div>
+										{% empty %}
+											<p>Não foram encontrados acessos dessa espécie.</p>
 										{% endfor %}
 									</div class="row-fluid">
 			    				</div>

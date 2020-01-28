@@ -8,8 +8,5 @@ class Imagem(models.Model):
 
 class Acesso(models.Model):
     nome = models.CharField(max_length=256, verbose_name='Nome', blank=False, null=False)
-    especie = models.OneToOneField(Especie, on_delete='cascade')
-    imagem = models.ManyToManyField(Imagem)
-
-
-
+    especie = models.ForeignKey(Especie, on_delete='cascade')
+    imagem = models.OneToOneField(Imagem, on_delete='cascade')

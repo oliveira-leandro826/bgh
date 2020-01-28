@@ -9,8 +9,15 @@ def introducao(request):
 
 def colecoes(request):
     especies = Especie.objects.all()
-    imagens = Imagem.objects.all()
 
-    contexto = {'especies': especies, 'imagens': imagens}
+    contexto = {'especies': especies}
 
-    return render(request, 'colecoes.html', contexto)      
+    return render(request, 'colecoes.html', contexto)   
+
+def especie(request, id):
+    especie = Especie.objects.get(pk=id)
+    acessos = Acesso.objects.filter(especie=especie.pk)
+
+    contexto = {'especie': especie, 'acessos': acessos}
+
+    return render(request, 'especie.html', contexto)
